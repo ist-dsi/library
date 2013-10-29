@@ -1,0 +1,51 @@
+{
+	"apps" : [
+		{
+			"title" : {
+				"pt-PT" : "Biblioteca", 
+				"en-GB" : "Library"
+			},
+			"description" : {
+				"pt-PT" : "Biblioteca", 
+				"en-GB" : "Library"
+			},
+			"accessExpression" : "#libraryOperators",
+			"path" : "library-ui/",
+			"functionalities" : [{
+                    "title": {
+                        "pt-PT": "Operador",
+                        "en-GB": "Operator"
+                    },
+                    "description": {
+                        "pt-PT": "Funcionalidades de operação da biblioteca",
+                        "en-GB": "Library operation functionalities"
+                    },
+                    "path": "#operator",
+                    "accessExpression": "#libraryOperators"
+                },
+                {
+                    "title": {
+                        "pt-PT": "Actualizar Capacidade",
+                        "en-GB": "Update Capacity"
+                    },
+                    "description": {
+                        "pt-PT": "Gestão dos números máximos de utilizadores e cacifos de uma biblioteca",
+                        "en-GB": "Management of the maximum number of users and lockers of a library"
+                    },
+                    "path": "#capacityManagement",
+                    "accessExpression": "#libraryOperators"
+                },
+                {
+                    "title": {
+                        "pt-PT": "Actualizar Operadores",
+                        "en-GB": "Update Operators"
+                    },
+                    "description": {
+                        "pt-PT": "Gestão dos operadores de biblioteca.",
+                        "en-GB": "Management of library managers."
+                    },
+                    "path": "#operatorsManagement",
+                    "accessExpression": "#libraryOperators"
+                }
+                ]
+}]}

@@ -1,0 +1,19 @@
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+.project
+.classpath
+.settings/
+configuration.properties
+fenix-framework.properties
+logback.xml
+log4j.properties
+
+# Maven #
+target/
+bin/
+

@@ -1,0 +1,45 @@
+<script>
+	var searchModule = require('libs/search');
+</script>
+<div class='row-fluid'>
+<div class="span4">
+	<div id="pesquisa">
+	<h4> Pesquisar Aluno</h4> 
+	<form class="form-inline" action="javascript:void(0);" id="searchForm">
+	<p>
+		<input type="text" id="userID" placeholder="Identificação">
+	</p>
+	<p>	 
+		<input type="submit" value="Procurar" class="btn">
+	</p>
+	</form> 
+	</div>	
+</div>
+<div class="span4 offset3">
+	<h4>Lotação:{{maxCapacity}}</h4>
+	<div class="progress progress-striped">
+    <div class="bar" style="width: {{percentage}}%;" id="studentBar"></div>
+    </div>
+    
+</div> 
+</div>
+<div class='row-fluid'>
+
+<div class="span4" id="person">
+</div>
+<div class="span4 offset3">
+    <h4>Presenças:</h4>
+	<table class="table" id="studentListTable">
+		<thead>
+			<tr>
+			<th>IST ID</th>
+			<th>Nome</th>
+			<th>Cacifo</th>
+			</tr>
+		</thead>
+		<tbody>
+			
+		</tbody>
+	</table>
+</div>
+</div>

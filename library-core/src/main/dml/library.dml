@@ -1,0 +1,97 @@
+package pt.ist.library;
+
+/*
+ * @(#)library.dml
+ *
+ * Copyright 2012 Instituto Superior Técnico
+ * Founding Authors: João Figueiredo, Luis Cruz, Paulo Abrantes, Susana Fernandes
+ * 
+ *      https://fenix-ashes.ist.utl.pt/
+ * 
+ *   This file is part of the Bennu web application infrastructure.
+ *
+ *   Bennu is free software: you can redistribute it and/or modify
+ *   it under the terms of the GNU Lesser General Public License as published
+ *   by the Free Software Foundation, either version 3 of the License, or
+ *   (at your option) any later version.*
+ *
+ *   Bennu is distributed in the hope that it will be useful,
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ *   GNU Lesser General Public License for more details.
+ *
+ *   You should have received a copy of the GNU Lesser General Public License
+ *   along with MyOrg. If not, see <http://www.gnu.org/licenses/>.
+ * 
+ */
+ 
+package pt.ist.library.domain;
+
+class LibrarySystem{
+	int milleniumCodeCounter;
+}
+
+class Library{
+	String name;
+	int maxOccupation;
+}
+
+class Locker{
+	int number;
+}
+
+class LibraryUser{
+	String MilleniumCode;
+}
+
+
+relation LibrarySystemLibrary{
+	Library playsRole library {
+		multiplicity *;
+	}
+	LibrarySystem playsRole librarySystem;
+}
+relation RemovedLibrarySystemLibrary{
+	Library playsRole removedLibrary {
+		multiplicity *;
+	}
+	LibrarySystem playsRole oldLibrarySystem;
+}
+
+relation UserLibraryUser{
+	.pt.ist.bennu.core.domain.User playsRole user{
+		multiplicity 1..1;
+	}
+	LibraryUser playsRole libraryUser;
+}
+
+relation LibraryLibraryUser {
+	Library playsRole library;
+	LibraryUser  playsRole user {
+		multiplicity *;
+	}
+}
+
+relation LibraryLocker {
+	Library playsRole library {
+		multiplicity 1..1;
+	}
+	Locker playsRole locker {
+		multiplicity *;
+	}
+}
+
+relation UserLocker {
+	LibraryUser playsRole user;
+	Locker playsRole locker;
+}
+
+relation LibrarySystemBennu{
+	.pt.ist.bennu.core.domain.Bennu playsRole bennu;
+	LibrarySystem playsRole librarySystem;
+}
+
+relation LibrarySystemDynamicGroup{
+	 .pt.ist.bennu.core.domain.groups.DynamicGroup playsRole operators;
+	 LibrarySystem playsRole;
+}

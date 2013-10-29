@@ -1,0 +1,45 @@
+<h4>{{#_i18n}}Aluno{{/_i18n}}</h4>
+{{#exists}}
+	<table class="table table-bordered">
+	<tr>
+	<td><b>Fotografia:</b></td> <td><img src="{{photo}}" class="img-polaroid"></td>
+	</tr>
+	<tr>
+	<td><b>Nome:</b></td><td> {{name}}</td>
+	</tr>
+	<tr>
+	<td><b>IST ID:</b></td><td> {{id}}</td>
+	</tr>
+	{{#milleniumNumber}}
+	<tr>
+	<td><b>Nº Millenium:</b></td> <td>{{milleniumNumber}}</td>
+	</tr>
+	{{/milleniumNumber}}
+	<tr>
+	<td><b>E-mail:</b></td> <td>{{email}}</td>
+	</tr>
+	</table>
+	{{^milleniumNumber}}
+		<a href="javascript:void(0)" id="generateCode"> Generate Code</a>
+	{{/milleniumNumber}}
+	<div id="operations">
+	{{#milleniumNumber}}
+	{{#onLibrary}}
+		Biblioteca: {{name}}
+		{{#locker}}
+			Cacifo: {{locker}}
+		{{/locker}}
+		<a href="javascript:void(0)" id="leave">Sair</a>
+	{{/onLibrary}}
+	{{^onLibrary}}
+		<div id="lockersList"></div><br/>
+		<a href="javascript:void(0)" id="enter">Entrar</a>
+	{{/onLibrary}}
+	{{/milleniumNumber}}
+	</div>
+{{/exists}}
+{{^exists}}
+	<p>
+		Utilizador não encontrado
+	</p>
+{{/exists}}

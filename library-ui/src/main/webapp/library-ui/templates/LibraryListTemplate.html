@@ -1,0 +1,27 @@
+
+	<div class="dropdown">
+		<h4>{{#_noti18n}}title{{/_noti18n}}</h4>
+		<button class="btn dropdown-toggle" data-toggle="dropdown" role="button"><span id="selectedLibrary">Libraries</span> <span class="caret"></span></button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+		</ul>
+		{{#Modifiable}}
+			<a href="#createModal" role="button" class="btn" data-toggle="modal">Nova</a>
+		{{/Modifiable}}
+	</div>
+
+<hr />
+<div id="librarycontent">
+</div>
+<div id="createModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Criar Nova Biblioteca</h3>
+  </div>
+  <div class="modal-body">
+    <p>Confirma que pretende criar uma nova biblioteca?</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Fechar</button>
+    <button class="btn btn-primary" data-dismiss="modal" id="add">Confirmar</button>
+  </div>
+</div>

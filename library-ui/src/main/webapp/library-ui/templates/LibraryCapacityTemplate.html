@@ -1,0 +1,30 @@
+<div class="span4">
+<form action="javascript:void(0)">
+<table class="table table-bordered">
+<tr>
+<td>Nome:</td><td><input type="text" value='{{name}}' id='name'></td>
+</tr>
+<tr>
+<td>Capacidade:</td><td><input type="text" value='{{capacity}}' id='capacity'></td>
+</tr>
+<tr>
+<td>Cacifos: </td><td><input type="text" value='{{lockers}}' id='lockers'></td>
+</tr>
+</table>
+<button type="submit" class="btn" id="button">Actualizar</button>
+<a href="#deleteModal" role="button" class="btn" data-toggle="modal">Eliminar</a>
+</form>
+</div>
+<div id="deleteModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Eliminar {{name}}</h3>
+  </div>
+  <div class="modal-body">
+    <p>Confirma que pretende eliminar esta biblioteca? Esta opção não é reversivel.</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Fechar</button>
+    <button class="btn btn-primary" id="delete">Confirmar</button>
+  </div>
+</div>

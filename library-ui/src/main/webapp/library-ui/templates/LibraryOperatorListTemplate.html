@@ -1,0 +1,38 @@
+<div class='span4'>
+<h4><p>Operadores</p></h4>
+<table class="table table-bordered" id='list'>
+<tr>
+<th> ISTID</th>
+<th> Nome</th>
+<th></th>
+</tr>
+</table>
+</div>
+
+
+<div class='span4 offset2'>
+<h5><p>Procurar</p></h5>
+	<form class="form-inline" action="javascript:void(0);" id="searchForm">
+	<p>
+		<input type="text" id="userID" placeholder="Identificação">
+	</p>
+	<p>	 
+		<input type="submit" value="Procurar" class="btn">
+	</p>
+	</form> 
+<div id='person'></div>
+</div>
+
+<div id="createModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Remover Operador</h3>
+  </div>
+  <div class="modal-body">
+    <p>Confirma que pretende remover o utilizador <span id='userName'></span> da lista de operadores?</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Fechar</button>
+    <button class="btn btn-primary" data-dismiss="modal" id="removeOperator">Confirmar</button>
+  </div>
+</div>
